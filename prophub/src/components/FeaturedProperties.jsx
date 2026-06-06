@@ -3,14 +3,15 @@ import PropertyCard from './PropertyCard.jsx'
 import { ArrowRight } from 'lucide-react'
 
 const ALL_PROPERTIES = [
-  { id:1, title:'Luxury 3BHK Sea View Apartment', location:'Bandra West, Mumbai', price:'₹3.2 Cr', beds:3, baths:2, area:'1,850 sq.ft', tag:'Featured', rating:4.9, reviews:38, type:'Apartment', verified:true },
-  { id:2, title:'Modern 2BHK in Prime Locality', location:'Koramangala, Bengaluru', price:'₹92 L', beds:2, baths:2, area:'1,100 sq.ft', tag:'Hot Deal', rating:4.7, reviews:21, type:'Apartment', verified:true },
-  { id:3, title:'Spacious Villa with Private Pool', location:'Jubilee Hills, Hyderabad', price:'₹4.5 Cr', beds:5, baths:4, area:'5,200 sq.ft', tag:'Premium', rating:5.0, reviews:12, type:'Villa', verified:true },
-  { id:4, title:'Ready-to-Move 1BHK Studio', location:'Whitefield, Bengaluru', price:'₹45 L', beds:1, baths:1, area:'650 sq.ft', tag:'New Launch', rating:4.5, reviews:17, type:'Studio', verified:false },
-  { id:5, title:'4BHK Independent Builder Floor', location:'South Extension, Delhi', price:'₹2.8 Cr', beds:4, baths:3, area:'3,200 sq.ft', tag:'Featured', rating:4.8, reviews:29, type:'Independent House', verified:true },
-  { id:6, title:'Gated Community 3BHK Apartment', location:'OMR Road, Chennai', price:'₹78 L', beds:3, baths:2, area:'1,350 sq.ft', tag:'New Launch', rating:4.6, reviews:14, type:'Apartment', verified:true },
-  { id:7, title:'Penthouse with Terrace Garden', location:'Powai, Mumbai', price:'₹5.8 Cr', beds:4, baths:4, area:'4,100 sq.ft', tag:'Premium', rating:4.9, reviews:8, type:'Penthouse', verified:true },
-  { id:8, title:'Affordable 2BHK Near Metro', location:'Dwarka Sec 12, Delhi', price:'₹68 L', beds:2, baths:2, area:'980 sq.ft', tag:'Hot Deal', rating:4.4, reviews:32, type:'Apartment', verified:false },
+  { id:1, title:'Luxury 3BHK Sea View Apartment', img:'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800', location:'Bandra West, Mumbai', price:'₹3.2 Cr', beds:3, baths:2, area:'1,850 sq.ft', tag:'Featured', rating:4.9, reviews:38, type:'Apartment', verified:true },
+  { id:2, title:'Modern 2BHK in Prime Locality', img:'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800', location:'Koramangala, Bengaluru', price:'₹92 L', beds:2, baths:2, area:'1,100 sq.ft', tag:'Hot Deal', rating:4.7, reviews:21, type:'Apartment', verified:true },
+  { id:3, title:'Spacious Villa with Private Pool', img:'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800', location:'Jubilee Hills, Hyderabad', price:'₹4.5 Cr', beds:5, baths:4, area:'5,200 sq.ft', tag:'Premium', rating:5.0, reviews:12, type:'Villa', verified:true },
+  { id:4, title:'Ready-to-Move 1BHK Studio', img:'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800', location:'Whitefield, Bengaluru', price:'₹45 L', beds:1, baths:1, area:'650 sq.ft', tag:'New Launch', rating:4.5, reviews:17, type:'Studio', verified:false },
+  { id:5, title:'4BHK Independent Builder Floor', img:'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800', location:'South Extension, Delhi', price:'₹2.8 Cr', beds:4, baths:3, area:'3,200 sq.ft', tag:'Featured', rating:4.8, reviews:29, type:'Independent House', verified:true },
+  { id:6, title:'Gated Community 3BHK Apartment', img:'https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800', location:'OMR Road, Chennai', price:'₹78 L', beds:3, baths:2, area:'1,350 sq.ft', tag:'New Launch', rating:4.6, reviews:14, type:'Apartment', verified:true },
+  { id:7, title:'Penthouse with Terrace Garden', img:'https://images.unsplash.com/photo-1572120360610-d971b9d7767c?w=800', location:'Powai, Mumbai', price:'₹5.8 Cr', beds:4, baths:4, area:'4,100 sq.ft', tag:'Premium', rating:4.9, reviews:8, type:'Penthouse', verified:true },
+  { id:8, title:'Affordable 2BHK Near Metro', img:'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800', location:'Dwarka Sec 12, Delhi', price:'₹68 L', beds:2, baths:2, area:'980 sq.ft', tag:'Hot Deal', rating:4.4, reviews:32, type:'Apartment', verified:false },
+
 ]
 
 const FILTERS = ['All', 'Buy', 'Rent', 'New Projects', 'Villa', 'Apartment']
