@@ -23,13 +23,13 @@ export default function FeaturedProperties() {
   const displayed = showAll ? ALL_PROPERTIES : ALL_PROPERTIES.slice(0, 6)
 
   return (
-    <section id="featured" className="py-20 bg-navy-950">
+    <section id="featured" className="py-20 bg-[#FFFFF0]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-10 gap-4">
           <div>
             <p className="text-gold text-sm font-medium tracking-widest uppercase mb-2">Handpicked for You</p>
-            <h2 className="section-title text-4xl md:text-5xl text-white">
+            <h2 className="section-title text-4xl md:text-5xl text-[#3E2C20]">
               Featured <span className="text-gold">Properties</span>
             </h2>
           </div>
@@ -46,7 +46,7 @@ export default function FeaturedProperties() {
               className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
                 filter === f
                   ? 'btn-gold shadow-lg'
-                  : 'bg-navy-800 text-slate-400 hover:bg-navy-700 hover:text-white border border-navy-700'
+                  : 'bg-[#EDE0D0] text-[#7A6A58] hover:bg-[#E6D7C3] hover:text-[#3E2C20] border border-[#E6D7C3]'
               }`}>
               {f}
             </button>

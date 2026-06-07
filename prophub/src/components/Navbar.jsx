@@ -31,9 +31,9 @@ export default function Navbar() {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 group">
             <div className="w-9 h-9 gold-gradient rounded-lg flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
-              <Building2 size={20} className="text-navy-950" style={{color:'#030e2e'}} />
+              <Building2 size={20} className="text-[#FFFFF0]" style={{color:'#FFFFF0'}} />
             </div>
-            <span className="font-heading text-2xl font-bold text-white">
+            <span className="font-heading text-2xl font-bold text-[#3E2C20]">
               Prop<span className="text-gold">Hub</span>
             </span>
           </Link>
@@ -42,7 +42,7 @@ export default function Navbar() {
           <div className="hidden md:flex items-center gap-6">
             {navLinks.map(l => (
               <a key={l.label} href={l.href}
-                className="text-slate-300 hover:text-gold text-sm font-medium transition-colors duration-200 relative group">
+                className="text-[#7A6A58] hover:text-gold text-sm font-medium transition-colors duration-200 relative group">
                 {l.label}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold transition-all duration-300 group-hover:w-full"></span>
               </a>
@@ -63,7 +63,7 @@ export default function Navbar() {
 
           {/* Mobile Menu Toggle */}
           <button onClick={() => setOpen(!open)}
-            className="md:hidden text-white p-2 rounded-lg hover:bg-navy-800 transition-colors">
+            className="md:hidden text-[#3E2C20] p-2 rounded-lg hover:bg-[#EDE0D0] transition-colors">
             {open ? <X size={22} /> : <Menu size={22} />}
           </button>
         </div>
@@ -71,10 +71,10 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {open && (
-        <div className="md:hidden glass border-t border-navy-700 px-4 py-4 space-y-3 animate-fade-in">
+        <div className="md:hidden glass border-t border-[#E6D7C3] px-4 py-4 space-y-3 animate-fade-in">
           {navLinks.map(l => (
             <a key={l.label} href={l.href} onClick={() => setOpen(false)}
-              className="block text-slate-300 hover:text-gold py-2 text-sm font-medium border-b border-navy-800 transition-colors">
+              className="block text-[#7A6A58] hover:text-gold py-2 text-sm font-medium border-b border-[#EDE0D0] transition-colors">
               {l.label}
             </a>
           ))}

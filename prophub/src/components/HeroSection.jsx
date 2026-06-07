@@ -22,18 +22,18 @@ export default function HeroSection() {
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0"
           style={{
-            background: 'linear-gradient(135deg, #030e2e 0%, #061a47 40%, #0f2d62 70%, #1a3f7d 100%)',
+            background: 'linear-gradient(135deg, #F8F4EC 0%, #F5E6D3 40%, #EDE0D0 70%, #E6D7C3 100%)',
           }}
         />
         {/* Decorative blobs */}
         <div className="absolute top-20 right-0 w-96 h-96 rounded-full opacity-10"
-          style={{ background: 'radial-gradient(circle, #f5c842 0%, transparent 70%)' }} />
+          style={{ background: 'radial-gradient(circle, rgba(111,78,55,0.3) 0%, transparent 70%)' }} />
         <div className="absolute bottom-0 left-20 w-72 h-72 rounded-full opacity-10"
-          style={{ background: 'radial-gradient(circle, #2c5699 0%, transparent 70%)' }} />
+          style={{ background: 'radial-gradient(circle, rgba(210,180,140,0.4) 0%, transparent 70%)' }} />
         {/* Grid pattern */}
         <div className="absolute inset-0 opacity-5"
           style={{
-            backgroundImage: 'linear-gradient(#ffffff 1px, transparent 1px), linear-gradient(90deg, #ffffff 1px, transparent 1px)',
+            backgroundImage: 'linear-gradient(rgba(111,78,55,0.07) 1px, transparent 1px), linear-gradient(90deg, rgba(111,78,55,0.07) 1px, transparent 1px)',
             backgroundSize: '60px 60px',
           }}
         />
@@ -48,14 +48,14 @@ export default function HeroSection() {
         </div>
 
         {/* Headline */}
-        <h1 className="font-heading text-5xl md:text-7xl font-bold text-white leading-tight mb-6"
+        <h1 className="font-heading text-5xl md:text-7xl font-bold text-[#3E2C20] leading-tight mb-6"
           style={{ animationDelay: '.2s' }}>
           Find Your<br />
           <span className="text-gold">Dream Home</span><br />
-          <span className="text-slate-400 text-4xl md:text-5xl font-normal italic">in India</span>
+          <span className="text-[#7A6A58] text-4xl md:text-5xl font-normal italic">in India</span>
         </h1>
 
-        <p className="text-slate-400 text-lg md:text-xl max-w-xl mb-10"
+        <p className="text-[#7A6A58] text-lg md:text-xl max-w-xl mb-10"
           style={{ animationDelay: '.3s' }}>
           Explore thousands of verified properties across 500+ cities. Buy, rent, or invest with complete confidence.
         </p>
@@ -69,7 +69,7 @@ export default function HeroSection() {
                 className={`flex-1 py-2.5 text-sm font-medium rounded-xl transition-all duration-200 ${
                   tab === t
                     ? 'btn-gold shadow-lg'
-                    : 'text-slate-400 hover:text-white hover:bg-navy-700'
+                    : 'text-[#7A6A58] hover:text-[#3E2C20] hover:bg-[#E6D7C3]'
                 }`}>
                 {t}
               </button>
@@ -86,13 +86,13 @@ export default function HeroSection() {
                   placeholder="City, locality or landmark"
                   value={city}
                   onChange={e => setCity(e.target.value)}
-                  className="w-full bg-navy-900 border border-navy-700 rounded-xl pl-9 pr-4 py-3 text-sm text-white placeholder-slate-500 transition-all"
+                  className="w-full bg-[#F8F4EC] border border-[#E6D7C3] rounded-xl pl-9 pr-4 py-3 text-sm text-[#3E2C20] placeholder-[#C4A882] transition-all"
                 />
               </div>
 
               {/* Type */}
               <select value={type} onChange={e => setType(e.target.value)}
-                className="flex-1 bg-navy-900 border border-navy-700 rounded-xl px-4 py-3 text-sm text-slate-400 transition-all appearance-none cursor-pointer">
+                className="flex-1 bg-[#F8F4EC] border border-[#E6D7C3] rounded-xl px-4 py-3 text-sm text-[#7A6A58] transition-all appearance-none cursor-pointer">
                 <option value="">Property Type</option>
                 <option>Apartment</option>
                 <option>Villa</option>
@@ -104,7 +104,7 @@ export default function HeroSection() {
 
               {/* Budget */}
               <select value={budget} onChange={e => setBudget(e.target.value)}
-                className="flex-1 bg-navy-900 border border-navy-700 rounded-xl px-4 py-3 text-sm text-slate-400 transition-all appearance-none cursor-pointer">
+                className="flex-1 bg-[#F8F4EC] border border-[#E6D7C3] rounded-xl px-4 py-3 text-sm text-[#7A6A58] transition-all appearance-none cursor-pointer">
                 <option value="">Budget</option>
                 <option>Under ₹25 Lakh</option>
                 <option>₹25L – ₹50L</option>
@@ -128,7 +128,7 @@ export default function HeroSection() {
             <div key={s.label} className="text-center animate-fade-in-up"
               style={{ animationDelay: `${.4 + i * .1}s`, opacity: 0, animationFillMode: 'forwards' }}>
               <div className="text-2xl md:text-3xl font-bold text-gold font-heading">{s.value}</div>
-              <div className="text-slate-500 text-xs mt-1">{s.label}</div>
+              <div className="text-[#9A8A78] text-xs mt-1">{s.label}</div>
             </div>
           ))}
         </div>
@@ -137,7 +137,7 @@ export default function HeroSection() {
       {/* Bottom wave divider */}
       <div className="absolute bottom-0 left-0 right-0 z-10">
         <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" className="w-full h-12">
-          <path d="M0 60V30C360 0 720 0 1080 30C1260 45 1380 55 1440 60H0Z" fill="#030e2e"/>
+          <path d="M0 60V30C360 0 720 0 1080 30C1260 45 1380 55 1440 60H0Z" fill="#F8F4EC"/>
         </svg>
       </div>
     </section>
