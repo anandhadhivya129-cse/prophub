@@ -29,7 +29,7 @@ export default function Footer() {
                 <Building2 size={22} style={{ color: '#FFFFF0' }} />
               </div>
               <span className="font-heading text-2xl font-bold text-[#3E2C20]">
-                Prop<span className="text-gold">Hub</span>
+                <span className="text-white text-sm">real estate </span><span className="text-gold">ALAYAA</span>
               </span>
             </Link>
             <p className="text-[#9A8A78] text-sm leading-relaxed mb-6">
@@ -43,11 +43,11 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-3 text-[#7A6A58]">
                 <Mail size={14} className="text-gold shrink-0" />
-                <span>support@prophub.in</span>
+                <span>support@alayaa.in</span>
               </div>
               <div className="flex items-start gap-3 text-[#7A6A58]">
                 <MapPin size={14} className="text-gold shrink-0 mt-0.5" />
-                <span>PropHub HQ, Level 12, Trade Centre,<br />Bandra Kurla Complex, Mumbai 400051</span>
+                <span>ALAYAA HQ, Level 12, Trade Centre,<br />Bandra Kurla Complex, Mumbai 400051</span>
               </div>
             </div>
 
@@ -82,7 +82,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-[#EDE0D0] mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-[#7A6A58] text-sm">
-            © 2025 PropHub Technologies Pvt. Ltd. All rights reserved.
+            © 2025 Real Estate ALAYAA. All rights reserved.
           </p>
           <div className="flex items-center gap-2">
             <span className="text-[#7A6A58] text-xs">We accept:</span>

@@ -37,7 +37,7 @@ export default function AdminDashboard() {
           <div className="w-8 h-8 gold-gradient rounded-lg flex items-center justify-center">
             <Building2 size={16} style={{ color: '#FFFFF0' }} />
           </div>
-          <span className="font-heading text-xl font-bold text-[#3E2C20]">Prop<span className="text-gold">Hub</span></span>
+          <span className="font-heading text-xl font-bold text-[#3E2C20]"><span className="text-white text-sm">real estate </span><span className="text-gold">ALAYAA</span></span>
         </Link>
         <nav className="flex-1 space-y-1">
           {[

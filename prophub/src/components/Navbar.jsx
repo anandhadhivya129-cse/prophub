@@ -34,7 +34,7 @@ export default function Navbar() {
               <Building2 size={20} className="text-[#FFFFF0]" style={{color:'#FFFFF0'}} />
             </div>
             <span className="font-heading text-2xl font-bold text-[#3E2C20]">
-              Prop<span className="text-gold">Hub</span>
+              <span className="text-white text-sm">real estate </span><span className="text-gold">ALAYAA</span>
             </span>
           </Link>
 
