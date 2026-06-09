@@ -11,31 +11,27 @@ const ALL_PROPERTIES = [
   { id:6, title:'Gated Community 3BHK Apartment', img:'https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800', location:'OMR Road, Chennai', price:'₹78 L', beds:3, baths:2, area:'1,350 sq.ft', tag:'New Launch', rating:4.6, reviews:14, type:'Apartment', verified:true },
   { id:7, title:'Penthouse with Terrace Garden', img:'https://images.unsplash.com/photo-1572120360610-d971b9d7767c?w=800', location:'Powai, Mumbai', price:'₹5.8 Cr', beds:4, baths:4, area:'4,100 sq.ft', tag:'Premium', rating:4.9, reviews:8, type:'Penthouse', verified:true },
   { id:8, title:'Affordable 2BHK Near Metro', img:'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800', location:'Dwarka Sec 12, Delhi', price:'₹68 L', beds:2, baths:2, area:'980 sq.ft', tag:'Hot Deal', rating:4.4, reviews:32, type:'Apartment', verified:false },
-
 ]
 
-const FILTERS = ['All', 'Buy', 'Rent', 'New Projects', 'Villa', 'Apartment']
+const FILTERS = ['All', 'Buy', 'Rent', 'New Projects', 'Villa', 'Apartment', 'Commercial']
 
 export default function FeaturedProperties() {
   const [filter, setFilter] = useState('All')
   const [showAll, setShowAll] = useState(false)
-
   const displayed = showAll ? ALL_PROPERTIES : ALL_PROPERTIES.slice(0, 6)
 
   return (
-    <section id="featured" className="py-20 bg-[#FFFFF0]">
+    <section id="featured" className="py-20" style={{background:'#003d3d'}}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-10 gap-4">
           <div>
-            <p className="text-gold text-sm font-medium tracking-widest uppercase mb-2">Handpicked for You</p>
-            <h2 className="section-title text-4xl md:text-5xl text-[#3E2C20]">
-              Featured <span className="text-gold">Properties</span>
+            <p className="text-sm font-medium tracking-widest uppercase mb-2" style={{color:'#F5C000'}}>Handpicked for You</p>
+            <h2 className="section-title text-4xl md:text-5xl text-white">
+              Featured <span style={{color:'#F5C000'}}>Properties</span>
             </h2>
           </div>
-          <a href="#" className="flex items-center gap-2 text-gold text-sm font-medium hover:gap-3 transition-all group">
-            View all listings
-            <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+          <a href="#" className="flex items-center gap-2 text-sm font-medium hover:gap-3 transition-all group" style={{color:'#F5C000'}}>
+            View all listings <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
           </a>
         </div>
 
@@ -46,7 +42,7 @@ export default function FeaturedProperties() {
               className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
                 filter === f
                   ? 'btn-gold shadow-lg'
-                  : 'bg-[#EDE0D0] text-[#7A6A58] hover:bg-[#E6D7C3] hover:text-[#3E2C20] border border-[#E6D7C3]'
+                  : 'bg-teal-800/60 text-white/60 hover:bg-teal-700/60 hover:text-white border border-teal-600/30'
               }`}>
               {f}
             </button>
@@ -63,11 +59,9 @@ export default function FeaturedProperties() {
           ))}
         </div>
 
-        {/* Show More */}
         {!showAll && (
           <div className="text-center mt-10">
-            <button onClick={() => setShowAll(true)}
-              className="btn-outline px-8 py-3 rounded-xl font-medium text-sm">
+            <button onClick={() => setShowAll(true)} className="btn-outline px-8 py-3 rounded-xl font-medium text-sm">
               Load More Properties
             </button>
           </div>

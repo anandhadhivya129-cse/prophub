@@ -30,14 +30,15 @@ export default function AdminDashboard() {
   const statusColor = { Active: 'text-[#5a7a5a] bg-[#5a7a5a]/10', Pending: 'text-[#8B7355] bg-[#8B7355]/10', Inactive: 'text-[#8B5A2B] bg-[#8B5A2B]/10' }
 
   return (
-    <div className="min-h-screen flex bg-[#FFFFF0]">
+    <div className="min-h-screen flex bg-teal-900/20">
       {/* Sidebar */}
-      <aside className="w-60 glass border-r border-[#E6D7C3] flex flex-col py-6 px-4 fixed h-full z-30">
+      <aside className="w-60 glass border-r border-teal-700/30 flex flex-col py-6 px-4 fixed h-full z-30">
         <Link to="/" className="flex items-center gap-2 mb-10 px-2">
           <div className="w-8 h-8 gold-gradient rounded-lg flex items-center justify-center">
             <Building2 size={16} style={{ color: '#FFFFF0' }} />
           </div>
-          <span className="font-heading text-xl font-bold text-[#3E2C20]"><span className="text-white text-sm">real estate </span><span className="text-gold">ALAYAA</span></span>
+          <span className="font-heading text-xl font-bold text-white"><span className="text-white text-xs opacity-60">real estate </span>
+              <span style={{color:"#F5C000"}} className="font-heading text-lg font-bold">ALAYAA</span></span>
         </Link>
         <nav className="flex-1 space-y-1">
           {[
@@ -48,13 +49,13 @@ export default function AdminDashboard() {
           ].map(({ id, label, icon: Icon }) => (
             <button key={id} onClick={() => setTab(id)}
               className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all
-                ${tab === id ? 'bg-gold text-[#FFFFF0] font-semibold' : 'text-[#7A6A58] hover:bg-[#EDE0D0] hover:text-[#3E2C20]'}`}>
+                ${tab === id ? 'bg-gold text-[#FFFFF0] font-semibold' : 'text-white/50 hover:bg-teal-700/30 hover:text-white'}`}>
               <Icon size={16} />{label}
             </button>
           ))}
         </nav>
         <button onClick={() => navigate('/')}
-          className="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm text-[#9A8A78] hover:text-[#8B5A2B] hover:bg-[#8B5A2B]/10 transition-all mt-4">
+          className="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm text-white/40 hover:text-[#8B5A2B] hover:bg-[#8B5A2B]/10 transition-all mt-4">
           <LogOut size={16} /> Logout
         </button>
       </aside>
@@ -62,42 +63,42 @@ export default function AdminDashboard() {
       {/* Main */}
       <main className="flex-1 ml-60 p-8">
         <div className="max-w-5xl mx-auto">
-          <h1 className="font-heading text-3xl font-bold text-[#3E2C20] mb-1">
+          <h1 className="font-heading text-3xl font-bold text-white mb-1">
             {tab === 'dashboard' ? 'Admin Dashboard' : tab === 'listings' ? 'Manage Listings' : tab === 'users' ? 'Users' : 'Settings'}
           </h1>
-          <p className="text-[#9A8A78] text-sm mb-8">Welcome back, Admin</p>
+          <p className="text-white/40 text-sm mb-8">Welcome back, Admin</p>
 
           {tab === 'dashboard' && (
             <>
               <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
                 {STATS.map(({ label, value, change, icon: Icon, color }) => (
-                  <div key={label} className="glass rounded-2xl p-5 border border-[#E6D7C3]">
+                  <div key={label} className="glass rounded-2xl p-5 border border-teal-700/30">
                     <div className={`w-10 h-10 ${color} bg-opacity-20 rounded-xl flex items-center justify-center mb-3`}>
                       <Icon size={18} className={color.replace('bg-', 'text-')} />
                     </div>
-                    <div className="text-2xl font-bold text-[#3E2C20] font-heading">{value}</div>
-                    <div className="text-[#7A6A58] text-xs mt-0.5">{label}</div>
+                    <div className="text-2xl font-bold text-white font-heading">{value}</div>
+                    <div className="text-white/50 text-xs mt-0.5">{label}</div>
                     <div className="text-green-400 text-xs mt-1 font-medium">{change} this month</div>
                   </div>
                 ))}
               </div>
-              <div className="glass rounded-2xl border border-[#E6D7C3] p-6">
-                <h2 className="text-[#3E2C20] font-semibold mb-4">Recent Listings</h2>
+              <div className="glass rounded-2xl border border-teal-700/30 p-6">
+                <h2 className="text-white font-semibold mb-4">Recent Listings</h2>
                 <div className="overflow-x-auto">
                   <table className="w-full text-sm">
                     <thead>
-                      <tr className="text-[#9A8A78] border-b border-[#E6D7C3]">
+                      <tr className="text-white/40 border-b border-teal-700/30">
                         <th className="text-left pb-3 font-medium">Property</th>
                         <th className="text-left pb-3 font-medium">Owner</th>
                         <th className="text-left pb-3 font-medium">Price</th>
                         <th className="text-left pb-3 font-medium">Status</th>
                       </tr>
                     </thead>
-                    <tbody className="divide-y divide-[#EDE0D0]">
+                    <tbody className="divide-y divide-teal-700/20">
                       {LISTINGS.slice(0,4).map(l => (
                         <tr key={l.id}>
-                          <td className="py-3 text-[#3E2C20]">{l.title}</td>
-                          <td className="py-3 text-[#7A6A58]">{l.owner}</td>
+                          <td className="py-3 text-white">{l.title}</td>
+                          <td className="py-3 text-white/50">{l.owner}</td>
                           <td className="py-3 text-gold font-semibold">{l.price}</td>
                           <td className="py-3">
                             <span className={`px-2 py-0.5 rounded-full text-xs font-medium ${statusColor[l.status]}`}>{l.status}</span>
@@ -112,13 +113,13 @@ export default function AdminDashboard() {
           )}
 
           {tab === 'listings' && (
-            <div className="glass rounded-2xl border border-[#E6D7C3] p-6">
+            <div className="glass rounded-2xl border border-teal-700/30 p-6">
               <div className="flex items-center justify-between mb-5">
                 <div className="relative">
                   <Search size={14} className="absolute left-3 top-1/2 -translate-y-1/2 text-gold" />
                   <input value={search} onChange={e => setSearch(e.target.value)}
                     placeholder="Search listings..."
-                    className="bg-[#F8F4EC] border border-[#E6D7C3] rounded-xl pl-9 pr-4 py-2.5 text-sm text-[#3E2C20] placeholder-[#C4A882] w-64 transition-all" />
+                    className="bg-teal-900/50 border border-teal-700/30 rounded-xl pl-9 pr-4 py-2.5 text-sm text-white placeholder-white/25 w-64 transition-all" />
                 </div>
                 <button className="btn-gold px-4 py-2.5 rounded-xl text-sm flex items-center gap-2">
                   <Plus size={14} /> Add Listing
@@ -127,7 +128,7 @@ export default function AdminDashboard() {
               <div className="overflow-x-auto">
                 <table className="w-full text-sm">
                   <thead>
-                    <tr className="text-[#9A8A78] border-b border-[#E6D7C3]">
+                    <tr className="text-white/40 border-b border-teal-700/30">
                       <th className="text-left pb-3 font-medium">Property</th>
                       <th className="text-left pb-3 font-medium">Owner</th>
                       <th className="text-left pb-3 font-medium">City</th>
@@ -136,12 +137,12 @@ export default function AdminDashboard() {
                       <th className="text-left pb-3 font-medium">Actions</th>
                     </tr>
                   </thead>
-                  <tbody className="divide-y divide-[#EDE0D0]">
+                  <tbody className="divide-y divide-teal-700/20">
                     {filtered.map(l => (
                       <tr key={l.id}>
-                        <td className="py-3 text-[#3E2C20]">{l.title}</td>
-                        <td className="py-3 text-[#7A6A58]">{l.owner}</td>
-                        <td className="py-3 text-[#7A6A58]">{l.city}</td>
+                        <td className="py-3 text-white">{l.title}</td>
+                        <td className="py-3 text-white/50">{l.owner}</td>
+                        <td className="py-3 text-white/50">{l.city}</td>
                         <td className="py-3 text-gold font-semibold">{l.price}</td>
                         <td className="py-3">
                           <span className={`px-2 py-0.5 rounded-full text-xs font-medium ${statusColor[l.status]}`}>{l.status}</span>
@@ -161,16 +162,16 @@ export default function AdminDashboard() {
           )}
 
           {tab === 'users' && (
-            <div className="glass rounded-2xl border border-[#E6D7C3] p-6 text-center py-16">
+            <div className="glass rounded-2xl border border-teal-700/30 p-6 text-center py-16">
               <Users size={48} className="text-[#D2B48C] mx-auto mb-4" />
-              <p className="text-[#7A6A58]">User management panel coming soon.</p>
+              <p className="text-white/50">User management panel coming soon.</p>
             </div>
           )}
 
           {tab === 'settings' && (
-            <div className="glass rounded-2xl border border-[#E6D7C3] p-6 text-center py-16">
+            <div className="glass rounded-2xl border border-teal-700/30 p-6 text-center py-16">
               <Settings size={48} className="text-[#D2B48C] mx-auto mb-4" />
-              <p className="text-[#7A6A58]">Settings panel coming soon.</p>
+              <p className="text-white/50">Settings panel coming soon.</p>
             </div>
           )}
         </div>
